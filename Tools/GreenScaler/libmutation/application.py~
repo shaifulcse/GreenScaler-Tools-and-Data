@@ -1,0 +1,14 @@
+import cpu
+import test
+import syscall
+import color
+class Application:
+    
+	def __init__(self, apk, package):
+		self.apk=apk
+		self.cpu=cpu.CPU()
+		self.syscall=syscall.SYSCALL(package)
+		self.color=color.RGB(package)
+		self.test=test.Test(apk)
+		#self.syscalls=Syscalls()
+		#self.rgb=RGB()	

@@ -1,0 +1,12 @@
+import libmutation.utils
+import libmutation.model
+import libmutation.cpu
+import libmutation.test
+import libmutation.syscall
+import libmutation.color
+utils = libmutation.utils
+model = libmutation.model
+Test = libmutation.test.Test
+CPU = libmutation.cpu.CPU
+SYSCALL = libmutation.syscall.SYSCALL
+RGB = libmutation.color.RGB

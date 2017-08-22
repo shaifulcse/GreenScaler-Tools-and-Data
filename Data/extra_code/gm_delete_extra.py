@@ -1,0 +1,69 @@
+import re
+import os
+from os import listdir
+from os import path
+src="/home/shaiful/research/shaiful_random_test_energy/final_data_upload_for_ICSE/"
+
+APKS=[]
+for i in range(6):
+	APKS.append({})
+
+
+
+for i in range(6):
+	fr=open(src+"/code/batch"+str(i+1)+"_apks.txt")
+	lines=fr.readlines()
+	for l in lines:
+		l=l.strip()
+		l=l[:-4]	
+		if l not in APKS:
+			APKS[i][l]=1
+
+
+PACK=[]
+for i in range(6):
+	PACK.append({})
+src="/home/shaiful/gitlab_repos/green-star/tests/"
+for i in range(6):
+	fr=open(src+"shaiful_androzoo_batch"+str(i+1)+"_energy/apk_to_package.txt")
+	lines=fr.readlines()
+	for l in lines:
+		data=re.findall("[^\t]+",l)
+		if data[0] in APKS[i]:
+			if data[1] not in PACK[i]:
+				PACK[i][data[1]]=1
+
+
+src="/home/shaiful/research/shaiful_random_test_energy/final_data_upload_for_ICSE/GM_tests/"
+
+
+for fold1 in os.listdir(src):
+
+	for d in fold1:
+	
+		if d.isdigit():
+			ind=int(d)
+			print ind	
+			break
+	for fold2 in os.listdir(src+fold1+"/"):
+		if os.path.isfile(src+fold1+"/"+fold2):
+			continue
+			
+		for fyl in os.listdir(src+fold1+"/"+fold2):
+			
+			if fyl.endswith(".sh"):
+				fyl=fyl[:-3]
+				ext=".sh"	
+			if fyl.endswith("_duration"):
+				fyl=fyl[:-9]
+				ext="_duration"
+			if fyl.endswith("_partition.csv"):
+				fyl=fyl[:-14]
+				ext="_partition.csv"
+				
+			
+			if fyl not in PACK[ind-1]:
+				print fyl
+				os.system("rm -f "+src+fold1+"/"+fold2+"/"+fyl+ext) 
+
+

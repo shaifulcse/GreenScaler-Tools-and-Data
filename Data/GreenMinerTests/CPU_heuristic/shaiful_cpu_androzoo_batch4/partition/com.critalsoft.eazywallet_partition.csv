@@ -1,0 +1,5 @@
+name,weight
+Wait for Wattlog,0
+Load App,1
+random_ops,1
+Exit & Wait,0

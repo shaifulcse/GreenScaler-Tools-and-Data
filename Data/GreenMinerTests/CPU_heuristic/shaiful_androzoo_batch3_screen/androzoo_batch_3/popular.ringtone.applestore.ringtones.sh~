@@ -1,0 +1,90 @@
+# Wait for Wattlog
+microsleep 10000000
+# Load App
+{{{timing}}}
+am start -n popular.ringtone.applestore.ringtones/popular.ringtone.applestore.ringtones.SplashActivity
+microsleep 10000000
+{{{timing}}}
+### Prefix to start the app
+input keyevent ENTER
+microsleep 2000000
+input keyevent ENTER
+microsleep 2000000
+input keyevent 61
+microsleep 2000000
+input keyevent ENTER
+microsleep 2000000
+input keyevent ENTER
+microsleep 2000000
+tapnswipe /dev/input/event1 tap 200 400
+microsleep 2000000
+tapnswipe /dev/input/event1 swipe 300 500 300 500
+microsleep 2000000
+###### key event ##########
+microsleep 2000000
+###### tap ##########
+tapnswipe /dev/input/event1 tap 60 178
+microsleep 2000000
+###### tap ##########
+tapnswipe /dev/input/event1 tap 193 1028
+microsleep 2000000
+###### input text ##########
+input text 45
+microsleep 2000000
+input keyevent ENTER
+microsleep 2000000
+###### swipe ##########
+tapnswipe /dev/input/event1 swipe 695 100 695 100
+microsleep 2000000
+###### tap ##########
+tapnswipe /dev/input/event1 tap 40 100
+microsleep 2000000
+###### input text ##########
+input text 45
+microsleep 2000000
+input keyevent ENTER
+microsleep 2000000
+###### swipe ##########
+tapnswipe /dev/input/event1 swipe 695 1100 20 1000
+microsleep 2000000
+###### tap ##########
+tapnswipe /dev/input/event1 tap 631 569
+microsleep 2000000
+###### tap ##########
+tapnswipe /dev/input/event1 tap 355 696
+microsleep 2000000
+###### key event ##########
+input keyevent ENTER
+microsleep 2000000
+###### tap ##########
+tapnswipe /dev/input/event1 tap 23 524
+microsleep 2000000
+###### tap ##########
+tapnswipe /dev/input/event1 tap 445 476
+microsleep 2000000
+###### swipe ##########
+tapnswipe /dev/input/event1 swipe 20 100 695 100
+microsleep 2000000
+###### tap ##########
+tapnswipe /dev/input/event1 tap 687 1004
+microsleep 2000000
+###### tap ##########
+tapnswipe /dev/input/event1 tap 46 952
+microsleep 2000000
+###### tap menu ##########
+input keyevent 82
+microsleep 2000000
+input keyevent ENTER
+microsleep 2000000
+input keyevent ENTER
+microsleep 2000000
+###### tap ##########
+tapnswipe /dev/input/event1 tap 21 755
+microsleep 2000000
+###### key event ##########
+input keyevent ENTER
+microsleep 2000000
+### Exit Process
+{{{timing}}}
+microsleep 2000000
+input keyevent HOME

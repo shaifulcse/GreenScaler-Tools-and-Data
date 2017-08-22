@@ -1,0 +1,2 @@
+id	user	nice	cntx	major_fault	duration	R*duration	G*duration	B*duration	fsync	bind	recvfrom	sendto	dup	poll	energy	
+1	1210.81818182	1.0	48949.3636364	0.0	50	7700	7850	8050	72.6153846154	1.0	266.230769231	52.0	18.0	0.0	62.1091515526	
