@@ -51,7 +51,7 @@ def cpu_measurement(app, apk_file, n, package):
 
 
 def syscall_trace(app, apk_file, n, package):
-		
+	n=2 ### delete it..	
 	for i in range(n):		
 		while 1:
 			print "running ", str((i+1))+"th round of strace"	
@@ -87,8 +87,9 @@ def screen_capture(app, apk_file, n, package):
 			
 			no_img=no_img+1
 		print "total captured_images="+str(no_img)
-		if no_img>=2:
+		if no_img>=1:
 			app.color.calculate_rgb()
+			utils.uninstall_app(package)
 			return 1
 		else:
 			print "Images were not captured properly"

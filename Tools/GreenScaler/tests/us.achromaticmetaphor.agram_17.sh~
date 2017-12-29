@@ -18,50 +18,19 @@
 #
 
 am start -n us.achromaticmetaphor.agram/.MainActivity
-sleep 10
-
-#### single word #################
-input tap 294 194
-sleep 2
-input text 'hlloe'
-input tap 501 746
 sleep 5
-input tap 159 1231
-sleep 3
-
-
-
-input tap 294 194
-sleep 2
-input text 'kcki'
-input tap 501 746
-sleep 5
-input tap 159 1231
-sleep 3
-
-
-##### Random words #####################
-input tap 294 397
-sleep 2
-input text '10000'
-input tap 501 746
-sleep 1
-input tap 159 1231
-sleep 2
 
 
 ##### Contained words #####################
-input tap 294 482
+input tap 210 771
 sleep 2
 input text 'mad'
-input tap 501 746
-sleep 5
-input tap 159 1231
-sleep 3
-
+input tap 883 1136
+sleep 2
+input keyevent 4
+sleep 1
 
 # "Exit" Process
-sleep 2
 input keyevent HOME
-sleep 20
+sleep 1
 

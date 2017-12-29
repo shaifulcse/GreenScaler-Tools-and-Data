@@ -31,6 +31,7 @@ class RGB:
 
 		subprocess.call(["adb", "shell", "rm", "-rf", "/sdcard/screen_shots"])
 
+
 	def capture_images(self):
 
 	
@@ -87,4 +88,4 @@ class RGB:
 		self.r=tot_R/no_image
 		self.g=tot_G/no_image
 		self.b=tot_B/no_image
-		
+		os.system("rm -rf "+utils.IMAGE_PATH+self.package)

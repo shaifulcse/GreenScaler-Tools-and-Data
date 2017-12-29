@@ -46,6 +46,10 @@ class RGB:
         	
 
 	def calculate_rgb(self):
+		print "=================================\n"
+		print "Now calculating RGB\nThis may take time based on test duration\n"
+		print "=================================\n"
+
 		tot_R=0
 		tot_G=0
 		tot_B=0	
