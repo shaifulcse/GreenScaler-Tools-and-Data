@@ -23,9 +23,13 @@ class RGB:
 
 
 	def pull_images(self):
-		os.system("rm -rf "+utils.IMAGE_PATH+self.package)
+		if os.path.exists(utils.IMAGE_PATH+self.package):
+			os.system("rm -rf "+utils.IMAGE_PATH+self.package)
 		os.system("mkdir "+utils.IMAGE_PATH+self.package)
 		subprocess.call("adb pull /sdcard/screen_shots/ "+utils.IMAGE_PATH+self.package, shell=True)
+		if not os.path.exists(utils.IMAGE_PATH+self.package+"/screen_shots"):
+			os.system("mkdir "+utils.IMAGE_PATH+self.package+"/screen_shots")
+			os.system("mv  "utils.IMAGE_PATH+self.package+"/* "+utils.IMAGE_PATH+self.package+"/screen_shots/")
 
 	def delete_images(self):
 
