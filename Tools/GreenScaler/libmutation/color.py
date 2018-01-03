@@ -2,8 +2,12 @@ import time, os, subprocess, threading
 import re
 import utils
 from os import listdir
-import Image
 
+try:
+	import Image
+except ImportError:
+	from PIL import Image
+	
 class RGB:
     
 	def __init__(self, package):
