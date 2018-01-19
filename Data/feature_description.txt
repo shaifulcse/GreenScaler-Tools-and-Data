@@ -1,0 +1,3 @@
+The selected features are explained in the paper. 
+However, in case of raw data, there are a lot of system calls that were captured but were not used by GreenScaler model. 
+To understand those features, one can just do 'man systemcall-name' on the linux command prompt.
